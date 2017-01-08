@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-namespace :admin do
+  namespace :admin do
+resources :jobs
+  end
   resources :jobs
-end
-root 'jobs#index'
+  root 'jobs#index'
 end
